@@ -25,6 +25,8 @@ Snippets
 
 * [pooledchannel](https://github.com/eruffaldi/pooledchannel) multithread channel class in C++ with several policies
 * [yreflectcxx](https://github.com/eruffaldi/yreflectcxx) is a CLang based C++ reflection for extracting types and OpenMP information
+* [cmm](https://github.com/eruffaldi/cmm) a C++ (ehm C--) compiler of College age with code generation for x86 and DEC Alpha
+* [cxxsumtime](https://github.com/eruffaldi/cxxsumtype) Algebreical Type for C++ 
 
 ## Data Tools
 
@@ -36,6 +38,7 @@ Snippets
 * [catkin_sub](https://github.com/eruffaldi/catkin_sub) ROS tool for partial builds of large catkin projects
 * [ros_picopro](https://github.com/eruffaldi/ros_picopro) ROS interface for Pico Projectors of libam7xxx family
 * [matlab_ros_utils](https://github.com/eruffaldi/matlab_ros_utils) MATLAB ROS utilities to be used with MATALB rosbag [my fork](https://github.com/eruffaldi/matlab_rosbag) 
+
 ## System Level
 
 * [tinyptp](https://github.com/eruffaldi/tinyptp) Precision Time Protocol (PTP) minimal implementation aimed at embedded cases (2016)
@@ -47,3 +50,4 @@ Snippets
 * [Course Simulink](https://github.com/eruffaldi/course_simulink) 
 ## Coding Fun
 * [lonewolf_graph](https://github.com/eruffaldi/lonewolf_graph) Tool for visualizing Lone Wolf hyperbooks and some graph analysis. Associated [blog post](http://teslacore.blogspot.it/2016/12/lone-wolf-story-graph.html)
+* [directionpole](https://github.com/eruffaldi/directionpole) code for the Where is the Direction Pole [post](http://teslacore.blogspot.it/2014/12/where-is-my-direction-pole.html)
