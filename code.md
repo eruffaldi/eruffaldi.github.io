@@ -11,24 +11,24 @@
 * [v4lsink device](https://github.com/eruffaldi/v4l2loopback_cpp) - create a simple V4L Linux sink as Virtual Camera
 * [depthcapture](https://github.com/eruffaldi/depthcapture) image caputre with compression for stereo (Zed) and depth cameras
 * [pyoni](https://github.com/eruffaldi/pyoni) ONI manipulation tool in Python (registration, fix, cut..) and related [post](http://teslacore.blogspot.it/2015/09/swissknife-tool-for-oni-files.html)
+
 ## Development Tools
 
 * [CMakego](https://github.com/eruffaldi/cmakego), a simplified way to accessing libraries from C/C++ applications using CMake - active - related [blog post](http://teslacore.blogspot.it/2014/08/simpler-access-to-external-libraries-in.html) (2014-2016)
 * [matlabaddons](https://github.com/eruffaldi/matlabaddons), a custom list of useful Matlab packages with an easy way to configure them - usable 
 * [roboticvagrant](https://github.com/eruffaldi/roboticvagrant) and [linuxsetup](https://github.com/eruffaldi/linuxsetup), Linux setups for Robotics with vagrant and docker respectively - related [blog post](http://teslacore.blogspot.it/2015/01/packaging-your-robotic-vm-with-vagrant.html)
-Snippets
 * [wine_vcpp](https://github.com/eruffaldi/wine_vcpp) Instructions for using command line Visual Studio inside Wine
 
 ## Math
 * [matsemindex](https://github.com/eruffaldi/matsemindex) Semantic access to tensor indices in Matlab
 * [stackedtensors](https://github.com/eruffaldi/stacked_tensor) manipulation of stacked tensors in Python and Matlab
-* [multidimcxx](https://github.com/eruffaldi/multidimcxx) C++11 class for statically typed tensors and associated operations. Associated [blog post](https://github.com/eruffaldi/multidimcxx).
+* [multidimcxx](https://github.com/eruffaldi/multidimcxx) C++11 class for statically typed tensors and associated operations. Associated [blog post](http://teslacore.blogspot.it/2015/07/compile-time-c-multidimensional-arrays.html).
 * [compare-mvn-tools](https://github.com/eruffaldi/compare-mvn-transform) Understanding Multivariate Normal Gaussian functions with Extended and Unscented filter
 
 ## C++
 
 * [pooledchannel](https://github.com/eruffaldi/pooledchannel) multithread channel class in C++ with several policies
-* [yreflectcxx](https://github.com/eruffaldi/yreflectcxx) is a CLang based C++ reflection for extracting types and OpenMP information
+* [yreflectcxx](https://github.com/eruffaldi/yreflectcxx) is a CLang based C++ reflection for extracting types and OpenMP information, related [post](http://teslacore.blogspot.it/2016/01/yet-another-clang-reflector-for-data.html)
 * [cmm](https://github.com/eruffaldi/cmm) a C++ (ehm C--) compiler of College age with code generation for x86 and DEC Alpha
 * [cxxsumtime](https://github.com/eruffaldi/cxxsumtype) Algebreical Type for C++ 
 
@@ -49,7 +49,7 @@ Snippets
 ## System Level
 
 * [tinyptp](https://github.com/eruffaldi/tinyptp) Precision Time Protocol (PTP) minimal implementation aimed at embedded cases (2016)
-* [UEFIBoot](https://github.com/eruffaldi/uefiboot) an example for writing UEFI applications in CMake/C++ - related blog post (2016)
+* [UEFIBoot](https://github.com/eruffaldi/uefiboot) an example for writing UEFI applications in CMake/C++ - related [blog post](http://teslacore.blogspot.it/2016/01/yet-another-clang-reflector-for-data.html) (2016)
 * [PitOS](http://teslacore.blogspot.it/2016/02/starting-with-uefi-with-cmake-and.html) an exercise of low-level OS writing and integration with Java without OS in the middle (2002)
 
 ## Course Material
