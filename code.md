@@ -11,7 +11,7 @@ Here the listing of the public repositories, mainly on github. Most projects are
 * [aruco pattern generator script](https://gist.github.com/eruffaldi/1e95c5fef80c0feda105) (Python) - PDF output, multiple pages control, physical size - usable
 * [v4lsink device](https://github.com/eruffaldi/v4l2loopback_cpp) - create a simple V4L Linux sink as Virtual Camera
 * [depthcapture](https://github.com/eruffaldi/depthcapture) image caputre with compression for stereo (Zed) and depth cameras
-* [pyoni](https://github.com/eruffaldi/pyoni) ONI manipulation tool in Python (registration, fix, cut..) and related [post](http://teslacore.blogspot.it/2015/09/swissknife-tool-for-oni-files.html)
+* [pyoni](https://github.com/eruffaldi/pyoni) ONI manipulation tool in Python (registration, fix, cut..) and related [post](http://teslacore.blogspot.it/2015/09/swissknife-tool-for-oni-files.html) and initial [post](http://teslacore.blogspot.it/2013/11/recovering-truncated-openni-oni-files.html) (2013-2016)
 
 ## Development Tools
 
