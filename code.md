@@ -1,8 +1,9 @@
 
 #Emanuele Ruffaldi Code Online
+Here the listing of the public repositories, mainly on github. Most projects are relatively small, except noted with (XL)
 
 ## 3D and Virtual Reality
-* [cocomr](https://github.com/cocomr) Compact Components framework and its Mixed Reality module
+* [cocomr](https://github.com/cocomr) (XL) Compact Components framework and its Mixed Reality module
 
 ## Computer Vision
 * [arucojson](https://github.com/eruffaldi/arucojson),  example Aruco program for obtaining JSON version of the visible markers together with some additional details such as marker area (C/C++) - usable - (2015-2016)
@@ -50,7 +51,7 @@
 
 * [tinyptp](https://github.com/eruffaldi/tinyptp) Precision Time Protocol (PTP) minimal implementation aimed at embedded cases (2016)
 * [UEFIBoot](https://github.com/eruffaldi/uefiboot) an example for writing UEFI applications in CMake/C++ - related [blog post](http://teslacore.blogspot.it/2016/01/yet-another-clang-reflector-for-data.html) (2016)
-* [PitOS](http://teslacore.blogspot.it/2016/02/starting-with-uefi-with-cmake-and.html) an exercise of low-level OS writing and integration with Java without OS in the middle (2002)
+* [PitOS](https://github.com/eruffaldi/pitos) (XL) an exercise of low-level OS writing and integration with Java without OS in the middle (2002)
 
 ## Course Material
 * [Course OpenMP and GPU](https://github.com/eruffaldi/course_openmpgpu) with associated [blog page](http://teslacore.blogspot.it/2016/04/short-lectures-on-openmp-and-cuda.html)
