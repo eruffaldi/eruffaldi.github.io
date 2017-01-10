@@ -31,6 +31,7 @@ This section deals meanly with manipulation of Tensors, Lie Algrebra tools and M
 * [stackedtensors](https://github.com/eruffaldi/stacked_tensor) manipulation of stacked tensors in Python and Matlab
 * [multidimcxx](https://github.com/eruffaldi/multidimcxx) C++11 class for statically typed tensors and associated operations. Associated [blog post](http://teslacore.blogspot.it/2015/07/compile-time-c-multidimensional-arrays.html).
 * [compare-mvn-tools](https://github.com/eruffaldi/compare-mvn-transform) Understanding Multivariate Normal Gaussian functions with Extended and Unscented filter
+* [visualautodiff](https://github.com/eruffaldi/visualautodiff) Automatic backward differentiation in Simulink by connecting blocks, and associated [blog post](http://teslacore.blogspot.it/2016/09/visual-reverse-autodifferentiation-in.html)
 
 ## C++
 
