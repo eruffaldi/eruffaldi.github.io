@@ -7,9 +7,9 @@ Here the listing of the public repositories, mainly on github. Legend on project
 * EX for exercises and examples
 
 ## 3D,  Virtual Reality and Haptics
-* [cocomr](https://github.com/cocomr) (XL) Compact Components framework and its Mixed Reality module
+* [cocomr](https://github.com/cocomr) (XL) Compact Components framework and its Mixed Reality module (2014-,C++, with others)
 * [chai3dproxy](https://github.com/eruffaldi/chai3dproxy) CHAI3D proxy code as standalone code
-
+* [little3d](https://github.com/eruffaldi/little3d) Little 3D engine used in our robotic application (2015-2016,C++)
 ## Computer Vision
 * [arucojson](https://github.com/eruffaldi/arucojson),  example Aruco program for obtaining JSON version of the visible markers together with some additional details such as marker area (C/C++) - usable - (2015-2016)
 * [calibration tool](https://github.com/eruffaldi/stereocalib) for RGB-D and stereo cameras in Python using OpenCV - active (2015-2016)
