@@ -3,6 +3,7 @@
 Here the listing of the public repositories, mainly on github. Legend on project size:
 * XL for large project, most of them used regularly
 * M for medium projects, some of them used
+* U for little utilities
 * EX for exercises and examples
 
 ## 3D,  Virtual Reality and Haptics
@@ -23,6 +24,7 @@ Here the listing of the public repositories, mainly on github. Legend on project
 * [matlabaddons](https://github.com/eruffaldi/matlabaddons), a custom list of useful Matlab packages with an easy way to configure them - usable 
 * [roboticvagrant](https://github.com/eruffaldi/roboticvagrant) and [linuxsetup](https://github.com/eruffaldi/linuxsetup), Linux setups for Robotics with vagrant and docker respectively - related [blog post](http://teslacore.blogspot.it/2015/01/packaging-your-robotic-vm-with-vagrant.html)
 * [wine_vcpp](https://github.com/eruffaldi/wine_vcpp) (EX) Instructions for using command line Visual Studio inside Wine
+* [editheader](https://gist.github.com/eruffaldi/51513cb4d656c797b129) (U) for editing headers of C/C++ managing license (Python)
 
 ## Math
 This section deals meanly with manipulation of Tensors, Lie Algrebra tools and Multivariate Gaussians as used in my research activity
@@ -43,19 +45,21 @@ This section deals meanly with manipulation of Tensors, Lie Algrebra tools and M
 ## Data Tools
 
 * [picopak](https://github.com/eruffaldi/picopak) experimental tool for keeping track of personal data packages using git as backend
-* [anycat](https://gist.github.com/eruffaldi/a1026de3455caef8aad01c10f1ed1d8e) bash script for generic decompression
+* [anycat](https://gist.github.com/eruffaldi/a1026de3455caef8aad01c10f1ed1d8e) (U) bash script for generic decompression
 * [boost_compress](https://github.com/eruffaldi/boost_compress) comparison of compression methods using Boost IO Streams and fork of [boost_lz4_filter](https://github.com/eruffaldi/boost_lz4_filter) for LZ4 streaming
 * [nested_list_product](https://github.com/eruffaldi/nested_list_product) generalization of condition matrix generation for experiments and benchmarking
   
-
 ## ROS Tools
-* [catkin_sub](https://github.com/eruffaldi/catkin_sub) ROS tool for partial builds of large catkin projects
+* [catkin_sub](https://github.com/eruffaldi/catkin_sub) (U) ROS tool for partial builds of large catkin projects
 * [ros_picopro](https://github.com/eruffaldi/ros_picopro) ROS interface for Pico Projectors of libam7xxx family
 * [matlab_ros_utils](https://github.com/eruffaldi/matlab_ros_utils) MATLAB ROS utilities to be used with MATALB rosbag [my fork](https://github.com/eruffaldi/matlab_rosbag)
 * [ros_alt_realsense](https://github.com/eruffaldi/ros_alt_realsense) alternative ROS interface to Intel Realsense cameras based on Intel librealsense
 
-## System Level
+## Matlab/Simulink specific
+* [simulink rt time](https://github.com/eruffaldi/simsynctime) Simulink block for synchronizing simulation time with real-time, cross platform, used in several projects
 
+## System Level
+* [usbbandwidth](https://gist.github.com/eruffaldi/e84d2a0b1990c258cd22a3c20f5b80a6) (U)  Estimation of USB device bandwidth usage in Linux, related [post](http://teslacore.blogspot.com/2016/09/bandwidth-usage-for-usb-cameras-zed.html)
 * [tinyptp](https://github.com/eruffaldi/tinyptp)(EX) Precision Time Protocol (PTP) minimal implementation aimed at embedded cases (2016)
 * [UEFIBoot](https://github.com/eruffaldi/uefiboot) an example for writing UEFI applications in CMake/C++ - related [blog post](http://teslacore.blogspot.com/2016/02/starting-with-uefi-with-cmake-and.html) (2016)
 * [PitOS](https://github.com/eruffaldi/pitos) (XL) an exercise of low-level OS writing and integration with Java without OS in the middle (2002)
@@ -66,7 +70,7 @@ This section deals meanly with manipulation of Tensors, Lie Algrebra tools and M
 
 ## Research Tools
 * [pytexeq](https://github.com/eruffaldi/pytexeq) command line LaTeX equation generation to images with cache
-* [publicationlister](https://github.com/eruffaldi/publicationlister) personal tool for publication listing based on BibTeX
+* [publicationlister](https://github.com/eruffaldi/publicationlister) (U) personal tool for publication listing based on BibTeX
 
 ## Coding Fun
 * [lonewolf_graph](https://github.com/eruffaldi/lonewolf_graph) Tool for visualizing Lone Wolf hyperbooks and some graph analysis. Associated [blog post](http://teslacore.blogspot.it/2016/12/lone-wolf-story-graph.html)
