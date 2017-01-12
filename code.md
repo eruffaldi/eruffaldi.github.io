@@ -56,7 +56,10 @@ This section deals meanly with manipulation of Tensors, Lie Algrebra tools and M
 * [ros_alt_realsense](https://github.com/eruffaldi/ros_alt_realsense) alternative ROS interface to Intel Realsense cameras based on Intel librealsense
 
 ## Matlab/Simulink specific
+
 * [simulink rt time](https://github.com/eruffaldi/simsynctime) Simulink block for synchronizing simulation time with real-time, cross platform, used in several projects
+* [matlab addons](https://github.com/eruffaldi/matlabaddons) Management of matlab toolboxes from Open Source projects with automatic configuration
+* [matlab ranges](https://github.com/eruffaldi/matranges) Manipulation of ranges from datasets
 
 ## System Level
 * [usbbandwidth](https://gist.github.com/eruffaldi/e84d2a0b1990c258cd22a3c20f5b80a6) (U)  Estimation of USB device bandwidth usage in Linux, related [post](http://teslacore.blogspot.com/2016/09/bandwidth-usage-for-usb-cameras-zed.html)
