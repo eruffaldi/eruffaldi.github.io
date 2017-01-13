@@ -60,6 +60,7 @@ This section deals meanly with manipulation of Tensors, Lie Algrebra tools and M
 * [simulink rt time](https://github.com/eruffaldi/simsynctime) Simulink block for synchronizing simulation time with real-time, cross platform, used in several projects
 * [matlab addons](https://github.com/eruffaldi/matlabaddons) Management of matlab toolboxes from Open Source projects with automatic configuration
 * [matlab ranges](https://github.com/eruffaldi/matranges) Manipulation of ranges from datasets
+* [binary tensor load](https://gist.github.com/eruffaldi/6719169197240722c039aedfb50f018b) (U) Loads a tensor from binary file
 
 ## System Level
 * [usbbandwidth](https://gist.github.com/eruffaldi/e84d2a0b1990c258cd22a3c20f5b80a6) (U)  Estimation of USB device bandwidth usage in Linux, related [post](http://teslacore.blogspot.com/2016/09/bandwidth-usage-for-usb-cameras-zed.html)
