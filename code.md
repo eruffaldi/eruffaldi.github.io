@@ -76,6 +76,10 @@ This section deals meanly with manipulation of Tensors, Lie Algrebra tools and M
 * [pytexeq](https://github.com/eruffaldi/pytexeq) command line LaTeX equation generation to images with cache
 * [publicationlister](https://github.com/eruffaldi/publicationlister) (U) personal tool for publication listing based on BibTeX
 
+## Other Contributions
+* [amfext](pecl.php.net/package/amfext) original developer of amfext serializer for PHP, now other are maintaining it
+
 ## Coding Fun
 * [lonewolf_graph](https://github.com/eruffaldi/lonewolf_graph) Tool for visualizing Lone Wolf hyperbooks and some graph analysis. Associated [blog post](http://teslacore.blogspot.it/2016/12/lone-wolf-story-graph.html)
 * [directionpole](https://github.com/eruffaldi/directionpole) code for the Where is the Direction Pole [post](http://teslacore.blogspot.it/2014/12/where-is-my-direction-pole.html)
+
