@@ -11,6 +11,8 @@ Here the listing of the public repositories, mainly on github. Legend on project
 * [chai3dproxy](https://github.com/eruffaldi/chai3dproxy) CHAI3D proxy code as standalone code
 * [little3d](https://github.com/eruffaldi/little3d) Little 3D engine used in our robotic application (2015-2016,C++)
 ## Computer Vision
+* [coursevision](https://github.com/eruffaldi/coursevision2017) Practical part of the SSSA vision course 2017 using (Python, Jupyter)
+* [livepython)(https://github.com/eruffaldi/livepython) Live Python coding for OpenCV in the Browser (Python, OpenCV)
 * [arucojson](https://github.com/eruffaldi/arucojson),  example Aruco program for obtaining JSON version of the visible markers together with some additional details such as marker area (C/C++) - usable - (2015-2016)
 * [calibration tool](https://github.com/eruffaldi/stereocalib) for RGB-D and stereo cameras in Python using OpenCV - active (2015-2016)
 * [aruco pattern generator script](https://gist.github.com/eruffaldi/1e95c5fef80c0feda105) (Python) - PDF output, multiple pages control, physical size - usable
@@ -30,7 +32,7 @@ Here the listing of the public repositories, mainly on github. Legend on project
 This section deals meanly with manipulation of Tensors, Lie Algrebra tools and Multivariate Gaussians as used in my research activity
 * [dliemat](https://github.com/eruffaldi/dliemat) Lie algebra and Distributions over Lie algrebra SE(3) in Matlab
 * [matsemindex](https://github.com/eruffaldi/matsemindex) Semantic access to tensor indices in Matlab
-* [stackedtensors](https://github.com/eruffaldi/stacked_tensor) manipulation of stacked tensors in Python and Matlab
+* [nested tensors](https://github.com/eruffaldi/https://github.com/eruffaldi/nested-tensors) manipulation of nested tensors in Python and Matlab
 * [multidimcxx](https://github.com/eruffaldi/multidimcxx) C++11 class for statically typed tensors and associated operations. Associated [blog post](http://teslacore.blogspot.it/2015/07/compile-time-c-multidimensional-arrays.html).
 * [compare-mvn-tools](https://github.com/eruffaldi/compare-mvn-transform) Understanding Multivariate Normal Gaussian functions with Extended and Unscented filter
 * [visualautodiff](https://github.com/eruffaldi/visualautodiff) Automatic backward differentiation in Simulink by connecting blocks, and associated [blog post](http://teslacore.blogspot.it/2016/09/visual-reverse-autodifferentiation-in.html)
@@ -71,6 +73,7 @@ This section deals meanly with manipulation of Tensors, Lie Algrebra tools and M
 ## Course Material
 * [Course on OpenMP and GPU](https://github.com/eruffaldi/course_openmpgpu) with associated [blog page](http://teslacore.blogspot.it/2016/04/short-lectures-on-openmp-and-cuda.html)
 * [Course on Simulink](https://github.com/eruffaldi/course_simulink) 
+* [Course on Vision](https://github.com/eruffaldi/coursevision2017) Practical part of the SSSA vision course 2017 using (Python, Jupyter)
 
 ## Research Tools
 * [pytexeq](https://github.com/eruffaldi/pytexeq) command line LaTeX equation generation to images with cache
