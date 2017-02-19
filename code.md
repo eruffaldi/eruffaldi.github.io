@@ -10,6 +10,7 @@ Here the listing of the public repositories, mainly on github. Legend on project
 * [cocomr](https://github.com/cocomr) (XL) Compact Components framework and its Mixed Reality module (2014-,C++, with others)
 * [chai3dproxy](https://github.com/eruffaldi/chai3dproxy) CHAI3D proxy code as standalone code
 * [little3d](https://github.com/eruffaldi/little3d) Little 3D engine used in our robotic application (2015-2016,C++)
+* [xvraam](https://github.com/eruffaldi/xvraamcpp) Tool for converting meshes in XVR AAM format to AssImp (2015,C++)
 ## Computer Vision
 * [coursevision](https://github.com/eruffaldi/coursevision2017) Practical part of the SSSA vision course 2017 using (Python, Jupyter)
 * [livepython)(https://github.com/eruffaldi/livepython) Live Python coding for OpenCV in the Browser (Python, OpenCV)
