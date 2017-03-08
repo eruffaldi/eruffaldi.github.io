@@ -20,6 +20,7 @@ Here the listing of the public repositories, mainly on github. Legend on project
 * [v4lsink device](https://github.com/eruffaldi/v4l2loopback_cpp) (EX) - create a simple V4L Linux sink as Virtual Camera
 * [depthcapture](https://github.com/eruffaldi/depthcapture) image capture with compression for stereo (Zed) and depth cameras
 * [pyoni](https://github.com/eruffaldi/pyoni) ONI manipulation tool in Python (registration, fix, cut..) and related [post](http://teslacore.blogspot.it/2015/09/swissknife-tool-for-oni-files.html) and initial [post](http://teslacore.blogspot.it/2013/11/recovering-truncated-openni-oni-files.html) (2013-2016)
+* [gstreamerflow](https://github.com/eruffaldi/gstreamerflow) (EX) - gstreamer sink/source in C++
 
 ## Development Tools
 
