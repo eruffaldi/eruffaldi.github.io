@@ -11,6 +11,9 @@ Here the listing of the public repositories, mainly on github. Legend on project
 * [chai3dproxy](https://github.com/eruffaldi/chai3dproxy) CHAI3D proxy code as standalone code
 * [little3d](https://github.com/eruffaldi/little3d) Little 3D engine used in our robotic application (2015-2016,C++)
 * [xvraam](https://github.com/eruffaldi/xvraamcpp) Tool for converting meshes in XVR AAM format to AssImp (2015,C++)
+* [xvr_water](https://github.com/eruffaldi/xvr_water) XVR Water effect as developed for the SPRINT Rowing Trainer (2010,XVR)
+* [openvr_exercies](https://github.com/eruffaldi/openvr_exercises) Cross-platform exercise using OpenVR (2016,C++)
+  
 ## Computer Vision
 * [coursevision](https://github.com/eruffaldi/coursevision2017) Practical part of the SSSA vision course 2017 using (Python, Jupyter)
 * [livepython)(https://github.com/eruffaldi/livepython) Live Python coding for OpenCV in the Browser (Python, OpenCV)
