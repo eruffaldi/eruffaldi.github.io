@@ -70,6 +70,10 @@ This section deals meanly with manipulation of Tensors, Lie Algrebra tools and M
 * [matlab ranges](https://github.com/eruffaldi/matranges) Manipulation of ranges from datasets
 * [binary tensor load](https://gist.github.com/eruffaldi/6719169197240722c039aedfb50f018b) (U) Loads a tensor from binary file
 
+## Web Level
+
+* [jsonbag](https://github.com/eruffaldi/jsonbag) JSON multipart response for modern browsers. Serverside in C++ Mongoose [blog post](http://teslacore.blogspot.it/2017/04/json-bag-binary-multipart-json-response.html)
+
 ## System Level
 * [usbbandwidth](https://gist.github.com/eruffaldi/e84d2a0b1990c258cd22a3c20f5b80a6) (U)  Estimation of USB device bandwidth usage in Linux, related [post](http://teslacore.blogspot.com/2016/09/bandwidth-usage-for-usb-cameras-zed.html)
 * [tinyptp](https://github.com/eruffaldi/tinyptp)(EX) Precision Time Protocol (PTP) minimal implementation aimed at embedded cases (2016)
