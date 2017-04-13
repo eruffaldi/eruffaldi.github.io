@@ -17,7 +17,7 @@ Here the listing of the public repositories, mainly on github. Legend on project
 ## Computer Vision
 * [coursevision](https://github.com/eruffaldi/coursevision2017) Practical part of the SSSA vision course 2017 using (Python, Jupyter)
 * [livepython)(https://github.com/eruffaldi/livepython) Live Python coding for OpenCV in the Browser (Python, OpenCV)
-* [arucojson](https://github.com/eruffaldi/arucojson),  example Aruco program for obtaining JSON version of the visible markers together with some additional details such as marker area (C/C++) - usable - (2015-2016)
+* [arucojson](https://github.com/eruffaldi/arucojson),  example Aruco program for obtaining JSON version of the visible from videos markers together with some additional details such as marker area (C/C++) - usable - (2015-2016)
 * [calibration tool](https://github.com/eruffaldi/stereocalib) for RGB-D and stereo cameras in Python using OpenCV - active (2015-2016)
 * [aruco pattern generator script](https://gist.github.com/eruffaldi/1e95c5fef80c0feda105) (Python) - PDF output, multiple pages control, physical size - usable
 * [v4lsink device](https://github.com/eruffaldi/v4l2loopback_cpp) (EX) - create a simple V4L Linux sink as Virtual Camera
