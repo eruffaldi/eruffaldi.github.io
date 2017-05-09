@@ -26,6 +26,7 @@ Here the listing of the public repositories, mainly on github. Legend on project
 * [pyoni](https://github.com/eruffaldi/pyoni) ONI manipulation tool in Python (registration, fix, cut..) and related [post](http://teslacore.blogspot.it/2015/09/swissknife-tool-for-oni-files.html) and initial [post](http://teslacore.blogspot.it/2013/11/recovering-truncated-openni-oni-files.html) (2013-2016)
 * [gstreamerflow](https://github.com/eruffaldi/gstreamerflow) (EX) - gstreamer sink/source in C++
 * [qtgst_appsink](https://github.com/eruffaldi/qtgst_appsink) (EX) - gstreamer sink in Qt without using QtGst
+* [mp4 duration](https://github.com/eruffaldi/mp4-quicktime) (script) - extraction of frame duration from videos 
 
 ## Development Tools
 
