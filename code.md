@@ -1,5 +1,5 @@
 
-#Emanuele Ruffaldi Code Online
+# Emanuele Ruffaldi Code Online
 Here the listing of the public repositories, mainly on github. Legend on project size:
 * XL for large project, most of them used regularly
 * M for medium projects, some of them used
