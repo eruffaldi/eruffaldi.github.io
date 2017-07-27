@@ -15,6 +15,9 @@ Here the listing of the public repositories, mainly on github. Legend on project
 * [openvr_exercies](https://github.com/eruffaldi/openvr_exercises) Cross-platform exercise using OpenVR (2016,C++)
   
 ## Computer Vision
+### Data
+* [Camera Calibrations](https://docs.google.com/document/d/1VHPz26lHr9J598dTvpFELeroz3kTZHS7gS81SA1KwBs/edit#)
+### Codes
 * [coursevision](https://github.com/eruffaldi/coursevision2017) Practical part of the SSSA vision course 2017 using (Python, Jupyter)
 * [livepython](https://github.com/eruffaldi/livepython) Live Python coding for OpenCV in the Browser (Python, OpenCV)
 * [cvcamera_info](https://github.com/eruffaldi/cvcamera_info) Tool for manipulating the Camera Parameters under camera transformations e.g. crop, mirror, scaling (Python,OpenCV)
