@@ -46,6 +46,7 @@ This section deals meanly with manipulation of Tensors, Lie Algrebra tools and M
 * [nested tensors](https://github.com/eruffaldi/https://github.com/eruffaldi/nested-tensors) manipulation of nested tensors in Python and Matlab
 * [multidimcxx](https://github.com/eruffaldi/multidimcxx) C++11 class for statically typed tensors and associated operations. Associated [blog post](http://teslacore.blogspot.it/2015/07/compile-time-c-multidimensional-arrays.html).
 * [compare-mvn-tools](https://github.com/eruffaldi/compare-mvn-transform) Understanding Multivariate Normal Gaussian functions with Extended and Unscented filter
+* [argmaxnd](https://github.com/eruffaldi/mat_argmax_nd) Argmax for Matlab with AVX2 optimization (on [File Exchange](https://it.mathworks.com/matlabcentral/fileexchange/63984-argmax-for-tensors-with-custom-type-index-and-avx2-optimization--mex-))
 * [visualautodiff](https://github.com/eruffaldi/visualautodiff) Automatic backward differentiation in Simulink by connecting blocks, and associated [blog post](http://teslacore.blogspot.it/2016/09/visual-reverse-autodifferentiation-in.html)
 
 ## C++
