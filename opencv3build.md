@@ -1,7 +1,7 @@
 
 # macOS #
 
-Tested with Sierra
+Tested with Sierra 10.12 using clang 8.1.0 and CUDA 8.0.61
 ~~~~
  brew update
  brew tap homebrew/science
