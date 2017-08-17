@@ -12,4 +12,5 @@ In case of failure some upgrades are needed:
 ~~~~
  brew upgrade ceres-solver
  brew upgrade protobuf
+ brew upgrade protobuf-c
 ~~~~
