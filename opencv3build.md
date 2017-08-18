@@ -41,10 +41,13 @@ Download the OpenCV 3.3 source then
 ~~~~
 mkdir buildmxe
 cd buildmxe
-$cmakemxe64 .. -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=ON
+$cmakemxe64 .. -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=OFF
 ~~~~
 
-The above is the minimal situation: without CUDA, Python
+The above is the minimal situation: without CUDA, Python, IPP
+
+
+## IPP ##
 
 Issue: /usr/local/mxe/usr/bin/x86_64-w64-mingw32.shared.posix-ld: cannot find -lRunTmChk. This is due to the fact that the IPP has been built with Visual Studio and exposes some dependencies. The patch at http://code.opencv.org/issues/1906 provides some insights of the involved functions.
 
