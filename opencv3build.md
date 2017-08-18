@@ -1,7 +1,8 @@
 
 # macOS Homebrew #
+STATUS: embedded protbuf error
 
-Tested with Sierra 10.12 using clang 8.1.0 and CUDA 8.0.61
+Running with Sierra 10.12 using clang 8.1.0 and CUDA 8.0.61
 ~~~~
  brew update
  brew tap homebrew/science
@@ -25,6 +26,8 @@ In case of failure some upgrades are needed:
 Problem with embedded protobuf: OpenCVFindLibProtobuf.cmake
 
 # macOS #
+STATUS: not tested
+
 
 Download the OpenCV 3.3 source then
 
@@ -35,6 +38,8 @@ CFLAGS=-march=native CXXFLAGS=-march=native cmake ..  -DCMAKE_BUILD_TYPE=Release
 ~~~~
 
 # mxe #
+STATUS: cblas_* is missing
+
 
 Download the OpenCV 3.3 source then
 
@@ -47,7 +52,7 @@ $cmakemxe64 .. -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABL
 The above is the minimal situation: without CUDA, Python, IPP
 
 
-## IPP ##
+## IPP Issue ##
 
 Issue: /usr/local/mxe/usr/bin/x86_64-w64-mingw32.shared.posix-ld: cannot find -lRunTmChk. This is due to the fact that the IPP has been built with Visual Studio and exposes some dependencies. The patch at http://code.opencv.org/issues/1906 provides some insights of the involved functions.
 
