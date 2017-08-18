@@ -46,7 +46,7 @@ Download the OpenCV 3.3 source then
 ~~~~
 mkdir buildmxe
 cd buildmxe
-$cmakemxe64 .. -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=OFF
+$cmakemxe64 .. -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=OFF -DWITH_LAPACL=OFF
 ~~~~
 
 The above is the minimal situation: without CUDA, Python, IPP
