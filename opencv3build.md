@@ -38,7 +38,6 @@ CFLAGS=-march=native CXXFLAGS=-march=native cmake ..  -DCMAKE_BUILD_TYPE=Release
 ~~~~
 
 # mxe #
-STATUS: cblas_* is missing
 
 
 Download the OpenCV 3.3 source then
@@ -46,7 +45,22 @@ Download the OpenCV 3.3 source then
 ~~~~
 mkdir buildmxe
 cd buildmxe
-$cmakemxe64 .. -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=OFF -DWITH_LAPACL=OFF
+CXXFLAGS=-DSTRSAFE_NO_DEPRECATE $cmakemxe64 .. -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=OFF -DWITH_LAPACK=OFF
+~~~~
+
+## Patches ##
+Edit modules/videoio/cap_dshow.cpp adding the following to disable a sprintf error
+~~~~
+#define STRSAFE_NO_DEPRECATE 
+~~~~
+
+Edit modules/videoio/src/cap_gstreamer.cpp adding
+~~~~
+inline char *realpath(const char *path, char *resolved_path)
+{
+    return _fullpath(resolved_path,path,PATH_MAX);
+}
+
 ~~~~
 
 The above is the minimal situation: without CUDA, Python, IPP
