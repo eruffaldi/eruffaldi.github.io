@@ -65,6 +65,14 @@ inline char *realpath(const char *path, char *resolved_path)
 
 The above is the minimal situation: without CUDA, Python, IPP
 
+## GStreamer usage ##
+
+Seems that libgstapp.dll.a is referenced as libgstapp.dll causing the missed references at videoio link time. This can be fixed acting on CMakeCache. The bus is in FindGStreamerWindows.cmake
+
+~~~~
+GSTREAMER_gstapp_LIBRARY:FILEPATH=/usr/local/mxe/usr/x86_64-w64-mingw32.shared.posix/lib/libgstapp.dll.a
+~~~~
+
 
 ## IPP Issue ##
 
