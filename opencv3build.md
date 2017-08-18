@@ -70,14 +70,19 @@ The above is the minimal situation: without CUDA, Python, IPP
 Seems that libgstapp.dll.a is referenced as libgstapp.dll causing the missed references at videoio link time. This can be fixed acting on CMakeCache. The bus is in FindGStreamerWindows.cmake
 
 ~~~~
-GSTREAMER_gstapp_LIBRARY:FILEPATH=/usr/local/mxe/usr/x86_64-w64-mingw32.shared.posix/lib/libgstapp.dll.a
+GSTREAMER_gstapp_LIBRARY:FILEPATH=/usr/local/mxe/usr/x86_64-w64-mingw32.shared.posix/lib/libgstapp-1.0.dll.a
 ~~~~
 
 
 ## IPP Issue ##
+Two issues:
 
-Issue: /usr/local/mxe/usr/bin/x86_64-w64-mingw32.shared.posix-ld: cannot find -lRunTmChk. This is due to the fact that the IPP has been built with Visual Studio and exposes some dependencies. The patch at http://code.opencv.org/issues/1906 provides some insights of the involved functions.
+1) Lack of RunTmChk due to cmake/OpenCVFindIPP.cmake
+2) Conversion of VS .lib to MingW .a
+
+First Issue: /usr/local/mxe/usr/bin/x86_64-w64-mingw32.shared.posix-ld: cannot find -lRunTmChk. This is due to the fact that the IPP has been built with Visual Studio and exposes some dependencies. The patch at http://code.opencv.org/issues/1906 provides some insights of the involved functions.
 
 The library RunTmChck provides __security_cookie and _chkstk, and it can be found online (e.g. https://github.com/dblock/dotnetinstaller/blob/master/ThirdParty/Microsoft/Visual%20Studio%208/VC/lib/RunTmChk.lib). In the past it was provided with Windows SDK.
+
 
 The next issues is the conversion of ippiw_win/lib/intel64/ipp_iw.lib and ippicv_win/lib/intel64/ippicvmt.lib 
