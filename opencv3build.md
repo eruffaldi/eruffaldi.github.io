@@ -75,14 +75,33 @@ GSTREAMER_gstapp_LIBRARY:FILEPATH=/usr/local/mxe/usr/x86_64-w64-mingw32.shared.p
 
 
 ## IPP Issue ##
-Two issues:
 
 1) Lack of RunTmChk due to cmake/OpenCVFindIPP.cmake
-2) Conversion of VS .lib to MingW .a
+2) Missing library of ippicv
 
-First Issue: /usr/local/mxe/usr/bin/x86_64-w64-mingw32.shared.posix-ld: cannot find -lRunTmChk. This is due to the fact that the IPP has been built with Visual Studio and exposes some dependencies. The patch at http://code.opencv.org/issues/1906 provides some insights of the involved functions.
+Issue 1: The patch at http://code.opencv.org/issues/1906 provides some insights of the involved functions.The library RunTmChk provides __security_cookie and _chkstk, and it can be found online (e.g. https://github.com/dblock/dotnetinstaller/blob/master/ThirdParty/Microsoft/Visual%20Studio%208/VC/lib/RunTmChk.lib). In the past it was provided with Windows SDK. 
 
-The library RunTmChck provides __security_cookie and _chkstk, and it can be found online (e.g. https://github.com/dblock/dotnetinstaller/blob/master/ThirdParty/Microsoft/Visual%20Studio%208/VC/lib/RunTmChk.lib). In the past it was provided with Windows SDK.
+Solution: use the stub RunTmChk provided in the next seeciton
+
+Issue 2: copy 3rdparty/ippicv/ippicv_win/lib/intel64/ippicvmt.lib to 3rdparty/ippicv/ippicv_win/lib/intel64/libippicvmt.a
+
+
 
 
 The next issues is the conversion of ippiw_win/lib/intel64/ipp_iw.lib and ippicv_win/lib/intel64/ippicvmt.lib 
+
+## RunTmChk Stub ##
+
+Build the following and copy to mxe lib folder
+
+~~~~
+add_library(RunTmChk STATIC code.c)
+~~~~
+
+~~~~
+void __fastcall __GSHandlerCheck() {}
+void __fastcall __security_check_cookie(unsigned* p) {}
+void __fastcall __chkstk() {}
+unsigned* __security_cookie;
+~~~~
+
