@@ -45,7 +45,7 @@ Download the OpenCV 3.3 source then
 ~~~~
 mkdir buildmxe
 cd buildmxe
-CXXFLAGS=-DSTRSAFE_NO_DEPRECATE $cmakemxe64 .. -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=OFF -DWITH_LAPACK=OFF
+CXXFLAGS=-DSTRSAFE_NO_DEPRECATE $cmakemxe64 .. -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=ON -DWITH_LAPACK=OFF
 ~~~~
 
 ## Patches ##
@@ -60,10 +60,7 @@ inline char *realpath(const char *path, char *resolved_path)
 {
     return _fullpath(resolved_path,path,PATH_MAX);
 }
-
 ~~~~
-
-The above is the minimal situation: without CUDA, Python, IPP
 
 ## GStreamer usage ##
 
