@@ -64,7 +64,7 @@ inline char *realpath(const char *path, char *resolved_path)
 
 ## GStreamer usage ##
 
-Seems that libgstapp.dll.a is referenced as libgstapp.dll causing the missed references at videoio link time. This can be fixed acting on CMakeCache. The bus is in FindGStreamerWindows.cmake
+Seems that libgstapp.dll.a is referenced as libgstapp.dll causing the missed references at videoio link time. This can be fixed acting on CMakeCache. The bug is in FindGStreamerWindows.cmake
 
 ~~~~
 GSTREAMER_gstapp_LIBRARY:FILEPATH=/usr/local/mxe/usr/x86_64-w64-mingw32.shared.posix/lib/libgstapp-1.0.dll.a
@@ -80,12 +80,10 @@ Issue 1: The patch at http://code.opencv.org/issues/1906 provides some insights 
 
 Solution: use the stub RunTmChk provided in the next seeciton
 
-Issue 2: copy 3rdparty/ippicv/ippicv_win/lib/intel64/ippicvmt.lib to 3rdparty/ippicv/ippicv_win/lib/intel64/libippicvmt.a
+Issue 2: the provided file is in VS naming instead of MINGW32 naming
+Solution: copy 3rdparty/ippicv/ippicv_win/lib/intel64/ippicvmt.lib to 3rdparty/ippicv/ippicv_win/lib/intel64/libippicvmt.a
 
 
-
-
-The next issues is the conversion of ippiw_win/lib/intel64/ipp_iw.lib and ippicv_win/lib/intel64/ippicvmt.lib 
 
 ## RunTmChk Stub ##
 
