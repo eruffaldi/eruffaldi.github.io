@@ -36,7 +36,12 @@ CFLAGS=-march=native CXXFLAGS=-march=native cmake ..  -DCMAKE_BUILD_TYPE=Release
 ~~~~
 
 For reducing CUDA compilation times specify CUDA_GENERATION as above.
-Additionally it is possible to add -DWITH_QT=ON
+
+Qt: this requires -DWITH_QT=ON and to make Qt5 accessible to the installer. The problem is that qt5 from brew is not automatically linked because of incompatibility. We need to make it visible.
+
+~~~~
+PATH=$PATH:/usr/local/opt/qt/bin
+~~~~
 
 # mxe #
 
