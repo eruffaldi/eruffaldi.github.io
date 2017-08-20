@@ -25,17 +25,18 @@ In case of failure some upgrades are needed:
 
 Problem with embedded protobuf: OpenCVFindLibProtobuf.cmake
 
-# macOS #
-STATUS: not tested
-
+# macOS Source #
 
 Download the OpenCV 3.3 source then
 
 ~~~~
 mkdir buildosx
 cd buildosx
-CFLAGS=-march=native CXXFLAGS=-march=native cmake ..  -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=ON -DWITH_CUDA=ON 
+CFLAGS=-march=native CXXFLAGS=-march=native cmake ..  -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=ON -DWITH_CUDA=ON -DWITH_OPENGL=ON 
 ~~~~
+
+For reducing CUDA compilation times specify CUDA_GENERATION as above.
+Additionally it is possible to add -DWITH_QT=ON
 
 # mxe #
 
@@ -72,6 +73,7 @@ GSTREAMER_gstapp_LIBRARY:FILEPATH=/usr/local/mxe/usr/x86_64-w64-mingw32.shared.p
 
 
 ## IPP Issue ##
+Pushed as PR on OpenCV: https://github.com/opencv/opencv/pull/9417
 
 1) Lack of RunTmChk due to cmake/OpenCVFindIPP.cmake
 2) Missing library of ippicv
@@ -82,6 +84,7 @@ Solution: use the stub RunTmChk provided in the next seeciton
 
 Issue 2: the provided file is in VS naming instead of MINGW32 naming
 Solution: copy 3rdparty/ippicv/ippicv_win/lib/intel64/ippicvmt.lib to 3rdparty/ippicv/ippicv_win/lib/intel64/libippicvmt.a
+
 
 
 
