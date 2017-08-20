@@ -2,7 +2,8 @@
 # macOS Homebrew #
 STATUS: embedded protbuf error
 
-Running with Sierra 10.12 using clang 8.1.0 and CUDA 8.0.61
+Running with Sierra 10.12 using CUDA 8.0.61 and Xcode 8.2 (clang 8.0.0) because Xcode 8.3 (clang 8.0.1) is not supported by this CUDA, this means that until NVidia updates CUDA it is necessary to downgrade the command line tools.
+
 ~~~~
  brew update
  brew tap homebrew/science
@@ -26,6 +27,8 @@ In case of failure some upgrades are needed:
 Problem with embedded protobuf: OpenCVFindLibProtobuf.cmake
 
 # macOS Source #
+
+Running with Sierra 10.12 using CUDA 8.0.61 and Xcode 8.2 (clang ...) because Xcode 8.3 is not supported by this CUDA 
 
 Download the OpenCV 3.3 source then
 
