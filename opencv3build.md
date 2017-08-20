@@ -2,7 +2,7 @@
 # macOS Homebrew #
 STATUS: embedded protbuf error
 
-Running with Sierra 10.12 using CUDA 8.0.61 and Xcode 8.2 (clang 8.0.0) because Xcode 8.3 (clang 8.0.1) is not supported by this CUDA, this means that until NVidia updates CUDA it is necessary to downgrade the command line tools.
+Running with Sierra 10.12 using CUDA 8.0.61 and Xcode 8.2 (clang 8.0.0) because Xcode 8.3 (clang 8.0.1) is not supported by this CUDA, this means that until NVidia updates CUDA it is necessary to downgrade the command line tools (details (here)[https://github.com/arrayfire/arrayfire/issues/1384]).
 
 ~~~~
  brew update
