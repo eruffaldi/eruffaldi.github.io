@@ -35,7 +35,7 @@ Download the OpenCV 3.3 source then
 ~~~~
 mkdir buildosx
 cd buildosx
-CFLAGS=-march=native CXXFLAGS=-march=native cmake ..  -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=ON -DWITH_CUDA=ON -DWITH_OPENGL=ON 
+CFLAGS=-march=native CXXFLAGS=-march=native cmake ..  -DCMAKE_BUILD_TYPE=Release -DBUILD_TESTS=OFF -DBUILD_PERF_TESTS=OFF -DBUILD_DOCS=OFF -DENABLE_CXX11=ON -DWITH_IPP=ON -DWITH_CUDA=ON -DWITH_OPENGL=ON -DWITH_CUBLAS=ON
 ~~~~
 
 For reducing CUDA compilation times specify CUDA_GENERATION as above.
