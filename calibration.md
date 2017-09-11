@@ -1,5 +1,8 @@
 
+TODO: documentation for visual verification of results
+
 # Camera-Robot Calibration Manual for RAMCIP
+
 
 There are two main camera-robot calibration elements in the RAMCIP robot
 
@@ -17,13 +20,42 @@ These are the data flowing in the three steps
 1) Capture produces a bag file
 2) Extraction takes the bag file and produces YAML files in a folder
 3) Computation takes YAML files and produces output as YAML file for calibration or a line for URDF
-# Overall
+## Overall
 
 | Name        | What           | Capture  | Calib | Bag |
 | ------------- | ------------- | -------------  | -------------  | -------------  |
 | K1Ar     | Camera-Projector and Projector Instrinsics | calib_k1ar_capture.launch | calib_k1ar_calib.launch | captureK1AR.bag |
 | K1Body    | Camera-Neck | calib_k1body_capture.launch | calib_k1body_calib.launch | captureK1Body.bag |
 | K1Hand*    | Camera-Hand | calib_k1hand_capture.launch | calib_k1hand_calib.launch | captureK1Hand.bag |
+
+## Topics and Data
+
+The following topics are used for the Kinect
+
+* /kinect1/rgb/image/compressed
+* /kinect1/rgb/camera_info
+* /kinect1/depth/image/compressedDepth
+* /kinect1/depth/camera_info
+* /projector/camera_info
+
+These are mapped to /camera, /camera_info
+
+In addition we have:
+* Trigger /trigger
+* Plane /plane
+* Board /boardk1
+* Joints /joint_state
+* TF
+
+
+## Reference Frames
+
+The following frames and their connections are used across the different calibrations
+
+* Camera Frame: kinect1_rgb_optical_frame 
+* Kinect Based: kinect1_link
+* Platform Base: platform_base
+* End-Effector of the Head: platform_head_pitch_link
 
 # Trigger
 
@@ -198,7 +230,7 @@ roslaunch ramcip_calib_sssa calib_k1body_calib.launch action:=calibload
 ```
 
 
-# K1Hand: Camera-Body using Marker in the Hand
+# NOT YET K1Hand: Camera-Body using Marker in the Hand
 
 Computes the transformation between the K1 attachment and the neck end-effector using a Fixed Hand, Marker in the Hand approach
 
