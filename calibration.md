@@ -17,6 +17,17 @@ These are the data flowing in the three steps
 1) Capture produces a bag file
 2) Extraction takes the bag file and produces YAML files in a folder
 3) Computation takes YAML files and produces output as YAML file for calibration or a line for URDF
+# Overall
+
+| Name        | What           | Capture  | Calib | Bag |
+| ------------- | ------------- | -------------  | -------------  | -------------  |
+| K1Ar     | Camera-Projector and Projector Instrinsics | calib_k1ar_capture.launch | calib_k1ar_calib.launch | captureK1AR.bag |
+| K1Body    | Camera-Neck | calib_k1body_capture.launch | calib_k1body_calib.launch | captureK1Body.bag |
+| K1Hand*    | Camera-Hand | calib_k1hand_capture.launch | calib_k1hand_calib.launch | captureK1Hand.bag |
+
+# Trigger
+
+Due to 
 
 # Alternate ROS Core
 
@@ -38,7 +49,11 @@ export PS1="\u@\H:\w ALTCORE$ "
 
 TODO: make two script altroscorestart.sh, altroscore.sh
 
-# Camera-Projector
+# K1AR: Camera-Projector
+
+Produces:
+1) Projector Intrinsics: ramcip_calib/data/projector_ci.yaml
+2) Camera Projector Transformation
 
 ## Physical Setup
 
@@ -46,7 +61,7 @@ Robot in front of a white wall so that the motion of the head in the range speci
 
 ## Software Setup
 
-Assuming the robot controlle ready
+Requires: the robot controlle active
 
 We start the camera
 ```
@@ -91,4 +106,117 @@ find calibk1ar | grep yaml | wc -l
 Then calibration:
 ```
 roslaunch ramcip_calib_sssa calib_k1ar_calib.launch action:=calibload
+```
+
+# K1Body: Camera-Body
+
+Computes the transformation between the K1 attachment and the neck end-effector using a Moving Head, Fixed Marker approach.
+
+## Physical Setup
+
+Robot in front of the wall where a Marker Board has been attached. Due to the Kinect resolution the board should be A4 with near robot or A3 with farther robot.
+
+Board A4:  ramcip_calib_sssa/data/board_phyv2/boardA4.pdf (7cm)
+Board A3:  ramcip_calib_sssa/data/board_phyv2/boardA3.pdf
+
+Note: the board has to be printed without any change of scale so that we have 7cm markers
+
+## Software Setup
+
+Assuming the robot controlle ready
+
+We start the camera
+```
+roslaunch ramcip_human_tracking ramcip_human_tracker.launch
+```
+
+On PC2 we start the head service
+```
+roslaunch ramcip_head_action look_around.launch
+```
+
+## Capture Start
+
+Shell 1: On PC1 we start recording
+```
+roslaunch ramcip_calib_sssa calib_k1body_capture.launch
+```
+
+Shell 2: On PC2 we start the motion of the head. The range of the head can be controlled modifying the file ramcip_head_action/launch/look_around.launch modifying the pan/tilt == yaw/pitch joint angles in radians.
+
+```
+rosrun ramcip_head_action look_around_client.py
+```
+
+The file look_around.launch specifies the number of interval. When the robot stops moving it is possible to stop Shell 1 and verify if the resulting file is correct:
+
+```
+rosbag info captureK1Body.bag | grep boardk1 
+rosbag info captureK1Body.bag | grep trigger
+```
+
+Improvement: move also the torso of the robot for extending the range
+
+## Extraction
+
+Inside the ALT ROS environment:
+```
+roslaunch ramcip_calib_sssa calib_k1body_calib.launch inputbag:=${PWD}/captureK1Body.bag with_inputbag:=true action:=save inputbag_rate:=2
+find calibk1body | grep yaml | wc -l
+```
+
+Then calibration:
+```
+roslaunch ramcip_calib_sssa calib_k1body_calib.launch action:=calibload
+```
+
+
+# K1Hand: Camera-Body using Marker in the Hand
+
+Computes the transformation between the K1 attachment and the neck end-effector using a Fixed Hand, Marker in the Hand approach
+
+## Physical Setup
+
+Robot with Marker or Markerboard attached to the end-effector or to another joint so that it is possible to move it with the end-effector
+
+Board A4:  ramcip_calib_sssa/data/board_phyv2/boardA4.pdf (7cm)
+
+Note: the board has to be printed without any change of scale so that we have 7cm markers
+
+## Software Setup
+
+Assuming the robot controlle ready
+
+We start the camera
+```
+roslaunch ramcip_human_tracking ramcip_human_tracker.launch
+```
+
+## Capture Start
+
+Shell 1: On PC1 we start recording
+```
+roslaunch ramcip_calib_sssa calib_k1body_capture.launch
+```
+
+On PC2 we have to move the hand with the marker freely so that it is visible. Trigger has to be generate manually
+
+```
+rosbag info captureK1Hand.bag | grep boardk1 
+rosbag info captureK1Hand.bag | grep trigger
+```
+
+Improvement: move also the torso of the robot for extending the range
+
+## Extraction
+
+Inside the ALT ROS environment:
+```
+roslaunch ramcip_calib_sssa calib_k1hand_calib.launch inputbag:=${PWD}/captureK1Hand.bag with_inputbag:=true action:=save inputbag_rate:=2
+find calibk1body | grep yaml | wc -l
+```
+
+Then calibration:
+```
+roslaunch ramcip_calib_sssa calib_k1hand_calib.launch action:=calibload
 ```
