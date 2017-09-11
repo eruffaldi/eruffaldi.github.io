@@ -111,8 +111,12 @@ TODO: make two script altroscorestart.sh, altroscore.sh
 # K1AR: Camera-Projector
 
 Produces:
-1) Projector Intrinsics: ramcip_calib/data/projector_ci.yaml
-2) Camera Projector Transformation
+1) Projector Intrinsics
+2) Camera Projector Transformation: 
+
+The Transformation is aimed at the xacro file at: $(find ramcip_description)/model/sensors.urdf.xacro replacing the line "projector parent".
+
+The Intrinsics are produced generating $(find ramcip_calib)/data/projector_ci.yml
 
 ## Physical Setup
 
