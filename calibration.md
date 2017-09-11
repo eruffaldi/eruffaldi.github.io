@@ -27,7 +27,34 @@ These are the data flowing in the three steps
 
 # Trigger
 
-Due to 
+Calibration is based on image snapshots when the moving parts are in a steady position. This is achievied automatically by the look around service by using a plateau in the motion centered at every pose. The result is a trigger message dispatched. This triggering message is used by the plane extractor for K1AR and by all the extraction phase in the calibrations. If the capture has been performed without trigger the only way is to inject trigger after the bag has been recorded.
+
+For some calibrations such as K1Hand the trigger can be raised manually in two ways: (1) using RViz Interactive Markers, (2) interactive using 2D Image, (3) command line
+
+## Interactive Markers
+```
+rosrun ramcip_calib_sssa interactive_trigger.py
+```
+
+Then from RViz when the interactive marker is moved the trigger is sent
+## Interactive 2D 
+
+Run this every time to insert a trigger. Use the image parameter to specify the message
+
+```
+rosrun ramcip_calib_sssa send_trigger.py _image:=/kinect1/rgb/image
+```
+
+## Command Line
+
+Run this every time to insert a trigger
+
+```
+rosrun ramcip_calib_sssa send_trigger.py
+```
+
+
+
 
 # Alternate ROS Core
 
@@ -199,7 +226,9 @@ Shell 1: On PC1 we start recording
 roslaunch ramcip_calib_sssa calib_k1body_capture.launch
 ```
 
-On PC2 we have to move the hand with the marker freely so that it is visible. Trigger has to be generate manually
+On PC2 we have to move the hand with the marker freely so that it is visible. Trigger has to be generate manually as discussed above.
+
+Verification
 
 ```
 rosbag info captureK1Hand.bag | grep boardk1 
