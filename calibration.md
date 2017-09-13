@@ -289,9 +289,26 @@ roslaunch ramcip_calib_sssa calib_k1hand_calib.launch action:=calibload
 
 ## Camera-Projector
 
-As of projector_ci.yaml
+Resolution 1366x768
+
+As of projector_ci.yaml only K because no distorsion
+```
+K = [[2283, 0.0, 700], [0.0, 2302, 765],  [0.0, 0.0, 1.0]]
 ```
 
+```
+      <projector parent="kinect1_rgb_optical_frame" name="projector">
+         <origin xyz="-0.042255 0.051946 0.000814" rpy="0.213309 0.015789 0.010629"/>
+      </projector>
+```
+
+## Kinect
+
+```
+<kinect parent="platform_head_pitch_link" name="kinect1">
+          <origin xyz="0.17 0.032  0.153" rpy="0.01 0.70 0" />
+          <!--origin xyz="0.16 0.032  0.148" rpy="0 0.40 0" /-->
+      </kinect>
 ```
 
 # Results 8 September 2017
