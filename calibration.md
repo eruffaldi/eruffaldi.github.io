@@ -22,10 +22,10 @@ These are the data flowing in the three steps
 3) Computation takes YAML files and produces output as YAML file for calibration or a line for URDF
 ## Overall
 
-| Name        | What           | Capture  | Calib | Bag |
-| ------------- | ------------- | -------------  | -------------  | -------------  |
-| K1Ar     | Camera-Projector and Projector Instrinsics | calib_k1ar_capture.launch | calib_k1ar_calib.launch | captureK1AR.bag |
-| K1Body    | Camera-Neck | calib_k1body_capture.launch | calib_k1body_calib.launch | captureK1Body.bag |
+| Name        | What           | Capture  | Calib | Bag | Output |
+| ------------- | ------------- | -------------  | -------------  | -------------  | -------------  |
+| K1Ar     | Camera-Projector and Projector Instrinsics | calib_k1ar_capture.launch | calib_k1ar_calib.launch | captureK1AR.bag | projector_ci.yaml projector_pose.urdf.xacro |
+| K1Body    | Camera-Neck | calib_k1body_capture.launch | calib_k1body_calib.launch | captureK1Body.bag | kinect_pose.urdf.xacro |
 | K1Hand*    | Camera-Hand | calib_k1hand_capture.launch | calib_k1hand_calib.launch | captureK1Hand.bag |
 
 ## Topics and Data
