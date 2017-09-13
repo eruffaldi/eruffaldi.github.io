@@ -291,10 +291,12 @@ roslaunch ramcip_calib_sssa calib_k1hand_calib.launch action:=calibload
 
 Resolution 1366x768
 
-As of projector_ci.yaml only K because no distorsion
+As of ramcip_calib/datar1/projector_ci.yaml only K because no distorsion
 ```
 K = [[2283, 0.0, 700], [0.0, 2302, 765],  [0.0, 0.0, 1.0]]
 ```
+
+Pose is in ramcip_description/model/projector_pose.urdf.xacro
 
 ```
       <projector parent="kinect1_rgb_optical_frame" name="projector">
