@@ -309,7 +309,6 @@ Pose is in ramcip_description/model/projector_pose.urdf.xacro
 ```
 <kinect parent="platform_head_pitch_link" name="kinect1">
           <origin xyz="0.17 0.032  0.153" rpy="0.01 0.70 0" />
-          <!--origin xyz="0.16 0.032  0.148" rpy="0 0.40 0" /-->
       </kinect>
 ```
 
@@ -317,10 +316,29 @@ Pose is in ramcip_description/model/projector_pose.urdf.xacro
 
 ## Camera-Projection Run 1
 
-Images:
-Reprojection Error:
-Projection K:
-Camera-Projector Distance:
+RMS: 3.7
+Imagees Used: 30
+Resolution 1366x768
+
+
+As of ramcip_calib/datar1/projector_ci.yaml only K because no distorsion
+```
+K = [[1.99099565e+03,  0.00000000e+00,   7.09699165e+02],  [  0.00000000e+00,   2.00126594e+03,  7.26177548e+02],       [  0.00000000e+00,   0.00000000e+00,  1.00000000e+00]
+```
+
+Pose is in ramcip_description/model/projector_pose.urdf.xacro
+
+RVec: 0.06747764, 0.01293018, 0.01144713
+tvec: -0.03305286, 0.03478025, 0.00672303
+
+TODO get spec below as URDF
+
+```
+      <projector parent="kinect1_rgb_optical_frame" name="projector">
+         <origin xyz="-0.042255 0.051946 0.000814" rpy="0.213309 0.015789 0.010629"/>
+      </projector>
+```
+
 
 ## Camera-Projection Run 2
 
