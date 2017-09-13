@@ -285,3 +285,29 @@ Then calibration:
 ```
 roslaunch ramcip_calib_sssa calib_k1hand_calib.launch action:=calibload
 ```
+# Calibration of Robot v1
+
+## Camera-Projector
+
+As of projector_ci.yaml
+```
+
+```
+
+# Results 8 September 2017
+
+## Camera-Projection Run 1
+
+Images:
+Reprojection Error:
+Projection K:
+Camera-Projector Distance:
+
+## Camera-Projection Run 2
+
+Images:
+Reprojection Error:
+Projection K:
+Camera-Projector Distance:
+
+Result stored i folder datar2 of branch F#831_calibration_robot2
