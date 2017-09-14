@@ -329,7 +329,7 @@ TODO get spec below as URDF
 
 ```
       <projector parent="kinect1_rgb_optical_frame" name="projector">
-         <origin xyz="-0.042255 0.051946 0.000814" rpy="0.213309 0.015789 0.010629"/>
+         <origin xyz="-0.03305286101781551 0.03478024814480575 0.006723026488737838" rpy="0.0675537388457 0.0125339992604 0.0118751587943"/>
       </projector>
 ```
 
