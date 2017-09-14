@@ -94,19 +94,13 @@ When step 2 is executed offline on a real robot it is necessary to create an Alt
 
 On Terminal A
 ```
-export ROS_MASTER_URI=http://127.0.0.1:16666 
-roscore -p 16666
-rosparam set use_sim_time true
-export PS1="\u@\H:\w ALTCORE$ "
+altroscore
 ```
 
 On Terminal B we launch the following before any Phase 2 command
 ```
 export ROS_MASTER_URI=http://127.0.0.1:16666 
-export PS1="\u@\H:\w ALTCORE$ "
 ```
-
-TODO: make two script altroscorestart.sh, altroscore.sh
 
 # K1AR: Camera-Projector
 
