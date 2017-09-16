@@ -40,8 +40,6 @@ Alternatively if the body is not visible by the camera or there is enough motion
 
 <img src="calibration_external.png" height="200">
 
-![alt text](calibration_external.png)
-
 The projector is calibrated using a projected board and the depth camera, differently from what is available in literature:
 
 <img src="calibration_projector.png" height="200">
