@@ -30,21 +30,21 @@ These are the data flowing in the three steps
 
 The final goal is shown in figure below in which we use object detected by the camera for grasping and projection:
 
-![alt text](calibration_test.png)
-
+<img src="calibration_test.png" height="200">
 
 First we have the Camera calibration using a marker on the body:
 
-![alt text](calibration_marker_on_body.png)
+<img src="calibration_marker_on_body.png" height="200">
 
 Alternatively if the body is not visible by the camera or there is enough motion it is possible to use the external board (Tsai):
+
+<img src="calibration_external.png" height="200">
 
 ![alt text](calibration_external.png)
 
 The projector is calibrated using a projected board and the depth camera, differently from what is available in literature:
 
-![alt text](calibration_projector.png)
-
+<img src="calibration_projector.png" height="200">
 
 ## Topics and Data
 
