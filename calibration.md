@@ -28,6 +28,24 @@ These are the data flowing in the three steps
 | K1Body    | Camera-Neck | calib_k1body_capture.launch | calib_k1body_calib.launch | captureK1Body.bag | kinect_pose.urdf.xacro |
 | K1Hand*    | Camera-Hand | calib_k1hand_capture.launch | calib_k1hand_calib.launch | captureK1Hand.bag |
 
+The final goal is shown in figure below in which we use object detected by the camera for grasping and projection:
+
+![alt text](calibration_test.png)
+
+
+First we have the Camera calibration using a marker on the body:
+
+![alt text](calibration_marker_on_body.png)
+
+Alternatively if the body is not visible by the camera or there is enough motion it is possible to use the external board (Tsai):
+
+![alt text](calibration_external.png)
+
+The projector is calibrated using a projected board and the depth camera, differently from what is available in literature:
+
+![alt text](calibration_projector.png)
+
+
 ## Topics and Data
 
 The following topics are used for the Kinect
