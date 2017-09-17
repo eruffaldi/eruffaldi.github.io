@@ -181,59 +181,6 @@ Then calibration:
 roslaunch ramcip_calib_sssa calib_k1ar_calib.launch action:=calibload
 ```
 
-## Results
-
-### Robot V1
-
-Resolution 1366x768
-
-As of ramcip_calib/datar1/projector_ci.yaml only K because no distorsion
-```
-K = [[2283, 0.0, 700], [0.0, 2302, 765],  [0.0, 0.0, 1.0]]
-```
-
-Pose is in ramcip_description/model/projector_pose.urdf.xacro
-
-```
-      <projector parent="kinect1_rgb_optical_frame" name="projector">
-         <origin xyz="-0.042255 0.051946 0.000814" rpy="0.213309 0.015789 0.010629"/>
-      </projector>
-```
-
-### Robot V2 - September 8th - Run 1
-
-RMS: 3.7
-Imagees Used: 30
-Resolution 1366x768
-
-
-As of ramcip_calib/datar1/projector_ci.yaml only K because no distorsion
-```
-K = [[1.99099565e+03,  0.00000000e+00,   7.09699165e+02],  [  0.00000000e+00,   2.00126594e+03,  7.26177548e+02],       [  0.00000000e+00,   0.00000000e+00,  1.00000000e+00]
-```
-
-Pose is in ramcip_description/model/projector_pose.urdf.xacro
-
-RVec: 0.06747764, 0.01293018, 0.01144713
-tvec: -0.03305286, 0.03478025, 0.00672303
-
-TODO get spec below as URDF
-
-```
-      <projector parent="kinect1_rgb_optical_frame" name="projector">
-         <origin xyz="-0.03305286101781551 0.03478024814480575 0.006723026488737838" rpy="0.0675537388457 0.0125339992604 0.0118751587943"/>
-      </projector>
-```
-
-
-### Robot V2 - September 8th - Run 2
-
-Images:
-Reprojection Error:
-Projection K:
-Camera-Projector Distance:
-
-Result stored i folder datar2 of branch F#831_calibration_robot2
 # K1Body: Camera-Body
 
 Computes the transformation between the K1 attachment and the neck end-effector using a Moving Head, Fixed Marker approach.
@@ -348,17 +295,10 @@ Then calibration:
 ```
 roslaunch ramcip_calib_sssa calib_k1hand_calib.launch action:=calibload
 ```
-# Calibration of Robot v1
 
+# Results
 
-## Kinect
+https://docs.google.com/spreadsheets/d/1rjvWUTv30tcPbswKn1KEhE6k5QWTByt3Jt7pMsyOKdE/edit
 
-```
-<kinect parent="platform_head_pitch_link" name="kinect1">
-          <origin xyz="0.17 0.032  0.153" rpy="0.01 0.70 0" />
-      </kinect>
-```
-
-# Results 8 September 2017
 
 
