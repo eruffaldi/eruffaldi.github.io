@@ -118,6 +118,29 @@ On Terminal B we launch the following before any Phase 2 command
 export ROS_MASTER_URI=http://127.0.0.1:16666 
 ```
 
+# Projector Resolution
+
+The Optoma ML750 projector has a native resolution of 1280x800 (16:10) and other resolutions are possible (e.g. 1366x768). Also on robot pc1 it is attached as HDMI-0. Verify it with xrandr. 
+
+There are several points in which resolution is relevant:
+
+## Projector Monitor Name
+* Little3d in alunch
+* object_proj as parameter monitor
+* check_resolution.sh
+## Projector Effective Size
+* Passed to little3d for configuring monitor in launch of calibk1ar capture
+* Passed to calib_k1ar.py as projector_size parameter: width,height
+* Used internally by check_resolution.sh inside code
+* Used by object_proj node as width/height private
+## Image Effective Size
+* Passed to calib_k1ar.py as board_size
+* The size of the image
+* Board Pixel Information (YAML)
+
+
+
+
 # K1AR: Camera-Projector
 
 Produces:
