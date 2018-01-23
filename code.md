@@ -6,6 +6,12 @@ Here the listing of the public repositories, mainly on github. Legend on project
 * U for little utilities
 * EX for exercises and examples
 
+## Operating System / Low-Level
+* [UEFIBoot](https://github.com/eruffaldi/uefiboot) an example for writing UEFI applications in CMake/C++ - related [blog post](http://teslacore.blogspot.com/2016/02/starting-with-uefi-with-cmake-and.html) (2016)
+* [PitOS](https://github.com/eruffaldi/pitos) (XL) an exercise of low-level OS writing and integration with Java without OS in the middle (2002)
+* [usbbandwidth](https://gist.github.com/eruffaldi/e84d2a0b1990c258cd22a3c20f5b80a6) (U)  Estimation of USB device bandwidth usage in Linux, related [post](http://teslacore.blogspot.com/2016/09/bandwidth-usage-for-usb-cameras-zed.html)
+* [tinyptp](https://github.com/eruffaldi/tinyptp)(EX) Precision Time Protocol (PTP) minimal implementation aimed at embedded cases (2016)
+
 ## 3D,  Virtual Reality and Haptics
 * [cocomr](https://github.com/cocomr) (XL) Compact Components framework and its Mixed Reality module (2014-,C++, with others)
 * [chai3dproxy](https://github.com/eruffaldi/chai3dproxy) CHAI3D proxy code as standalone code
@@ -80,11 +86,6 @@ This section deals meanly with manipulation of Tensors, Lie Algrebra tools and M
 
 * [jsonbag](https://github.com/eruffaldi/jsonbag) JSON multipart response for modern browsers. Serverside in C++ Mongoose [blog post](http://teslacore.blogspot.it/2017/04/json-bag-binary-multipart-json-response.html)
 
-## System Level
-* [usbbandwidth](https://gist.github.com/eruffaldi/e84d2a0b1990c258cd22a3c20f5b80a6) (U)  Estimation of USB device bandwidth usage in Linux, related [post](http://teslacore.blogspot.com/2016/09/bandwidth-usage-for-usb-cameras-zed.html)
-* [tinyptp](https://github.com/eruffaldi/tinyptp)(EX) Precision Time Protocol (PTP) minimal implementation aimed at embedded cases (2016)
-* [UEFIBoot](https://github.com/eruffaldi/uefiboot) an example for writing UEFI applications in CMake/C++ - related [blog post](http://teslacore.blogspot.com/2016/02/starting-with-uefi-with-cmake-and.html) (2016)
-* [PitOS](https://github.com/eruffaldi/pitos) (XL) an exercise of low-level OS writing and integration with Java without OS in the middle (2002)
 
 ## Course Material
 * [Course on OpenMP and GPU](https://github.com/eruffaldi/course_openmpgpu) with associated [blog page](http://teslacore.blogspot.it/2016/04/short-lectures-on-openmp-and-cuda.html)
