@@ -11,15 +11,11 @@
 <style>
 /* Layout: one narrow column; a vertical timeline of nodes as a quiet nod to the old graph menu. */
 :root{
-  --bg:#fbfcfc; --fg:#1c2326; --muted:#5d6a70; --line:#d9e1e3; --accent:#1e5f6e; --node:#fbfcfc;
+  --bg:#000; --fg:#e6ebed; --muted:#8e9aa0; --line:#23292c; --accent:#72c6d6; --node:#000;
   --sans:"IBM Plex Sans",system-ui,-apple-system,"Segoe UI",Roboto,sans-serif;
   --mono:"IBM Plex Mono",ui-monospace,SFMono-Regular,Menlo,Consolas,monospace;
+  color-scheme:dark;
 }
-@media (prefers-color-scheme: dark){:root:not([data-theme="light"]){
-  --bg:#121719; --fg:#e3e9eb; --muted:#93a2a8; --line:#2a3438; --accent:#7cc2d1; --node:#121719; color-scheme:dark}}
-:root[data-theme="dark"]{
-  --bg:#121719; --fg:#e3e9eb; --muted:#93a2a8; --line:#2a3438; --accent:#7cc2d1; --node:#121719; color-scheme:dark}
-
 *{box-sizing:border-box}
 body{margin:0;background:var(--bg);color:var(--fg);font:400 1rem/1.6 var(--sans);-webkit-font-smoothing:antialiased}
 main{max-width:42rem;margin:0 auto;padding-block:4.5rem 3rem;
@@ -53,6 +49,12 @@ h2{margin:0 0 1rem;font-family:var(--mono);font-weight:500;font-size:.75rem;text
 .repos p{grid-column:1/-1;margin:0;color:var(--muted);font-size:.93rem}
 .stars{font-family:var(--mono);font-size:.78rem;color:var(--muted);font-variant-numeric:tabular-nums}
 .note{margin:.9rem 0 0;font-size:.85rem;color:var(--muted)}
+
+/* Cursor: local only, fine pointers only, off with reduced motion */
+#cursor{position:fixed;inset:0;pointer-events:none;z-index:50;display:none}
+html.has-cursor,html.has-cursor *{cursor:none!important}
+html.has-cursor .x-search{cursor:text!important}
+html.has-cursor #cursor{display:block}
 
 /* Repository explorer */
 .x-controls{display:grid;gap:.9rem;margin-bottom:1.1rem}
@@ -93,6 +95,7 @@ footer{border-top:1px solid var(--line);padding-top:1.25rem;font-size:.85rem;col
 
 </head>
 <body>
+<canvas id="cursor" aria-hidden="true"></canvas>
 <main>
   <header>
     <h1>Emanuele Ruffaldi</h1>
@@ -249,6 +252,45 @@ footer{border-top:1px solid var(--line);padding-top:1.25rem;font-size:.85rem;col
   document.querySelectorAll('[data-sort]').forEach(b=>b.addEventListener('click',()=>{
     st.sort=b.dataset.sort;document.querySelectorAll('[data-sort]').forEach(x=>x.setAttribute('aria-pressed',x===b));drawList()}));
   draw();
+})();
+</script>
+<script>
+(()=>{
+  // Custom cursor: a dot at the pointer, a ring that follows with lag and opens over links, a short fading trail.
+  const mq=matchMedia('(hover:hover) and (pointer:fine) and (prefers-reduced-motion:no-preference)');
+  const cv=document.getElementById('cursor'),cx=cv.getContext('2d');
+  const accent=getComputedStyle(document.documentElement).getPropertyValue('--accent').trim()||'#72c6d6';
+  let W=0,H=0,dpr=1,on=false,raf=0,seen=false;
+  const p={x:-100,y:-100},ring={x:-100,y:-100,r:14},trail=[];let hot=0,hotT=0,down=0;
+  const HOT='a,button,label,[data-tag],input[type=checkbox]';
+  function size(){dpr=devicePixelRatio||1;W=innerWidth;H=innerHeight;cv.width=W*dpr;cv.height=H*dpr;cv.style.width=W+'px';cv.style.height=H+'px'}
+  function move(e){p.x=e.clientX;p.y=e.clientY;if(!seen){seen=true;ring.x=p.x;ring.y=p.y}
+    trail.push({x:p.x,y:p.y,t:performance.now()});hotT=e.target.closest&&e.target.closest(HOT)?1:0;
+    cv.style.opacity=e.target.closest&&e.target.closest('.x-search')?0:1}
+  function frame(now){
+    hot+=(hotT-hot)*.18;ring.x+=(p.x-ring.x)*.2;ring.y+=(p.y-ring.y)*.2;
+    while(trail.length&&now-trail[0].t>380)trail.shift();
+    cx.setTransform(dpr,0,0,dpr,0,0);cx.clearRect(0,0,W,H);
+    if(seen){
+      cx.lineCap='round';cx.lineJoin='round';cx.strokeStyle=accent;
+      for(let i=1;i<trail.length;i++){const a=1-(now-trail[i].t)/380;
+        cx.globalAlpha=a*.55;cx.lineWidth=.5+a*2.5;cx.beginPath();cx.moveTo(trail[i-1].x,trail[i-1].y);cx.lineTo(trail[i].x,trail[i].y);cx.stroke()}
+      const r=ring.r+hot*12-down*4;
+      cx.globalAlpha=.08+hot*.14;cx.fillStyle=accent;cx.beginPath();cx.arc(ring.x,ring.y,r,0,7);cx.fill();
+      cx.globalAlpha=.55+hot*.35;cx.lineWidth=1.25;cx.beginPath();cx.arc(ring.x,ring.y,r,0,7);cx.stroke();
+      cx.globalAlpha=1;cx.fillStyle=hot>.5?'#000':accent;cx.beginPath();cx.arc(p.x,p.y,hot>.5?2:3,0,7);cx.fill();
+      if(hot>.5){cx.strokeStyle=accent;cx.lineWidth=1.5;cx.stroke()}
+    }
+    raf=requestAnimationFrame(frame)}
+  const leave=()=>{seen=false;trail.length=0};
+  const dn=()=>down=1,up=()=>down=0;
+  function set(){const want=mq.matches;if(want===on)return;on=want;
+    document.documentElement.classList.toggle('has-cursor',on);
+    if(on){size();addEventListener('resize',size);addEventListener('pointermove',move,{passive:true});
+      document.addEventListener('mouseleave',leave);addEventListener('pointerdown',dn);addEventListener('pointerup',up);raf=requestAnimationFrame(frame)}
+    else{removeEventListener('resize',size);removeEventListener('pointermove',move);document.removeEventListener('mouseleave',leave);
+      removeEventListener('pointerdown',dn);removeEventListener('pointerup',up);cancelAnimationFrame(raf);cx.clearRect(0,0,cv.width,cv.height)}}
+  mq.addEventListener?mq.addEventListener('change',set):mq.addListener(set);set();
 })();
 </script>
 </body>
